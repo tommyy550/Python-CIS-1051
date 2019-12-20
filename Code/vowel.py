@@ -8,10 +8,11 @@ def vowel(s):
 def evenNum(n):
     r=0
     x=str(n)
-    for i in range(1,len(x)+1):
-        #if (n%(10**i))%2==0:
-        if n//10**i%10:
+    holder=1
+    for i in range(len(x)):
+        if (n//holder)%2==0:
             r=r+1
+        holder=holder*10
     return r
 
 def armstrong(n):
